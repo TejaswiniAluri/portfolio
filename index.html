@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#about" onclick="showSection('about')">About</a></li>
+            <li><a href="#skills" onclick="showSection('skills')">Skills</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="section">
+        <div class="hero">
+            <div class="photo-container">
+                <img src="image.jpg" alt="Tejaswini's Photo">
+            </div>
+            <div class="details">
+                <h1>Hi, I'm Lakshmi Tejaswini <span>Aluri</span></h1>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="section" style="display:none;">
+        <div class="details">
+            <h1>About Me</h1>
+            <p>A Final year Computer Science and Engineering student with a minor degree in Business Management, I am driven by a passion for coding and app development. I am eager to explore innovative solutions and contribute to creating secure and user-friendly digital experiences, excited to leverage my skills and knowledge to solve complex challenges.</p>
+        </div>
+    </div>
+    <div id="skills" class="section" style="display:none;">
+        <div class="details">
+            <h1>Skills</h1>
+            <ul>
+                <li>TECHNICAL SKILLS</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML/CSS</li>
+                <li>C programming</li>
+                <li>Data Structures in C</li>
+            </ul>
+        </div>
+    </div>
+    <div id="contact" class="section" style="display:none;">
+        <div class="details">
+            <h1>Contact</h1>
+            <p>Email: <a href="mailto:tejaswinialuri1@gmail.com">tejaswinialuri1@gmail.com</a></p>
+            <p>Twitter: <a href="https://twitter.com/tejaswini_aluri" target="_blank">@tejaswini_aluri</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/tejaswini-aluri" target="_blank">Tejaswini Aluri</a></p>
+        </div>
+        <div class="resume-button">
+            <a href="https://drive.google.com/file/d/1UoCVn4OeQldcpP5XZOJattDptVish2cf/view?usp=sharing" target="_blank" id="resumeBtn">Resume</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://twitter.com/tejaswini_aluri" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="mailto:tejaswinialuri1@gmail.com" target="_blank"><i class="far fa-envelope fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/tejaswini-aluri" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
